@@ -246,6 +246,39 @@ article.active {
 }
 
 
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-item {
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-2);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+}
+
+.project-item a {
+  color: var(--white-2);
+  text-decoration: none;
+}
+
+.project-item a h4 {
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 8px;
+}
+
+.project-item a p {
+  margin: 4px 0;
+  font-size: var(--fs-6);
+  color: var(--light-gray);
+}
 
 
 
