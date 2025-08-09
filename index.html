@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,197 +11,274 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    /* Demo dark/light theme CSS variables */
-    :root {
-      --bg: #fff;
-      --text: #1a1a1a;
-      --accent: #fff8dc;
-      --highlight: #ffd45b;
-      --card: #f9fafb;
-    }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Poppins', sans-serif;
-      transition: background 0.3s, color 0.3s;
-    }
-    body.dark-mode {
-      --bg: #10141a;
-      --text: #f2f2f2;
-      --accent: #282a36;
-      --highlight: #ffdf40;
-      --card: #1b2027;
-    }
-    #theme-toggle {
-      position: fixed;
-      top: 1rem; right: 1rem;
-      background: var(--highlight); color: #000;
-      border: none; outline: none; border-radius: 24px;
-      padding: 8px 16px; font-size: 1rem; font-weight: 500;
-      cursor: pointer; z-index: 9999;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
-      transition: background 0.3s, color 0.3s;
-    }
-    .navbar-link.active { color: var(--highlight); }
-    .certificate-panel, .project-list, .skills-list { display: flex; flex-wrap: wrap; gap: 24px; }
-    .certificate-item, .project-item, .skills-item {
-      background: var(--card); padding: 20px; border-radius: 12px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-      flex: 1; min-width: 260px; max-width: 100%;
-    }
-    .certificate-link { color: var(--highlight); font-weight: bold; text-decoration: underline; }
-    .project-img { width: 100%; border-radius: 12px; margin-bottom: 10px; }
-    .service-content-box {margin-bottom:16px;}
-    @media(max-width:600px){.sidebar{display:none;} #theme-toggle{top:unset;bottom:1rem;right:1rem;}}
-  </style>
 </head>
+
 <body>
 
-<!-- Optional: Dark/Light mode toggle -->
-<button id="theme-toggle" aria-label="Toggle dark and light theme">🌙 Dark Mode</button>
 
-<main>
-  <!-- Sidebar -->
-  <aside class="sidebar" data-sidebar>
-    <div class="sidebar-info">
-      <figure class="avatar-box">
-        <img src="./assets/images/my-avatar.png" alt="Gautam Singh Badwal" width="80">
-      </figure>
-      <div class="info-content">
-        <h1 class="name" title="Gautam Singh Badwal">Gautam Badwal</h1>
-        <p class="title">Software Engineer & Cyber Security Specialist</p>
+  <main>
+
+
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Gautam Singh Badwal" width="80">
+        </figure>
+
+
+
+
+        <div class="info-content">
+  <h1 class="name" title="Gautam Singh Badwal">Gautam Badwal</h1>
+  <p class="title">Software Engineer & Cyber Security Specialist</p>
+</div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
       </div>
-      <button class="info_more-btn" data-sidebar-btn>
-        <span>Show Contacts</span>
-        <ion-icon name="chevron-down"></ion-icon>
-      </button>
-    </div>
-    <div class="sidebar-info_more">
-      <div class="separator"></div>
-      <ul class="contacts-list">
-        <li class="contact-item">
-          <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
-          <div class="contact-info">
-            <p class="contact-title">Email</p>
-            <a href="mailto:newgamewithap@gmail.com" class="contact-link">GautamSinghBadwal</a>
-          </div>
-        </li>
-        <li class="contact-item">
-          <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
-          <div class="contact-info">
-            <p class="contact-title">Phone</p>
-            <a href="https://wa.me/+13477699453" class="contact-link">+1 (347) 769-9453</a>
-          </div>
-        </li>
-        <li class="contact-item">
-          <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
-          <div class="contact-info">
-            <p class="contact-title">Birthday</p>
-            <time datetime="2005-01-13">January 13, 2005</time>
-          </div>
-        </li>
-        <li class="contact-item">
-          <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-          <div class="contact-info">
-            <p class="contact-title">Location</p>
-            <a href="https://www.google.com/maps/place/Delhi" class="contact-link">New Delhi, India</a>
-          </div>
-        </li>
-      </ul>
-      <div class="separator"></div>
-      <ul class="social-list">
-        <li class="social-item"><a href="https://github.com/GautamSinghBadwal" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
-        <li class="social-item"><a href="https://www.linkedin.com/in/gautamsinghbadwal/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-        <li class="social-item"><a href="https://www.instagram.com/gautambadwal" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
-      </ul>
-    </div>
-  </aside>
 
-  <div class="main-content">
-    <!-- Navbar -->
-    <ul class="navbar-list">
-      <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-      <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-      <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
-      <li class="navbar-item"><button class="navbar-link" data-nav-link>Certificates</button></li>
-    </ul>
+      <div class="sidebar-info_more">
 
-    <!-- About -->
-    <article class="about active" data-page="about">
-      <header><h2 class="h2 article-title">💼 About Me</h2></header>
-      <section class="about-text">
-        <p>
-          Hi, I’m Gautam Singh Badwal from New Delhi, India. I’m a Software Engineer and Cyber Security Specialist who loves building things that are not only powerful but also secure, fast, and reliable.<br><br>
-          I work across Ethical Hacking, Data Science, Machine Learning, Full‑Stack Development, and App Development, blending my technical skills with a strong focus on safety, speed, and scalability.<br><br>
-          Over the years, I’ve had the chance to work with World Vision Canada, Toshiba India, Bank of Montreal, TC Energy, Lambton College, and PortSwigger — and I’ve also taken on multiple freelance projects on Fiverr. My work has ranged from running penetration tests and incident response to creating secure, user‑friendly web and mobile apps.<br><br>
-          Right now, I’m pursuing my B.Tech in Computer Science at IIT Madras (with a Minor in AI from IIT Ropar). I’ve also earned certifications from Harvard University (Python), HCL GUVI, EC‑Council, and Microsoft — which have sharpened my skills in security engineering, web application testing, AI solutions, and both front‑end and back‑end development.
-        </p>
-      </section>
-      <section class="service">
-        <h3 class="h3 service-title">What I'm Doing</h3>
-        <ul class="service-list">
-          <li class="service-item">
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Ethical Hacking</h4>
-              <p class="service-item-text">Performing penetration testing and vulnerability assessments to identify and fix security risks, ensuring systems remain secure from threats.</p>
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-          </li>
-          <li class="service-item">
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Data Science</h4>
-              <p class="service-item-text">Analyzing and interpreting complex data to deliver actionable insights, building predictive models for real-world problem-solving.</p>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:newgamewithap@gmail.com" class="contact-link">GautamSinghBadwal</a>
             </div>
+
           </li>
-          <li class="service-item">
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Back-End Development</h4>
-              <p class="service-item-text">Designing and implementing secure, scalable server-side applications, APIs, and database solutions for seamless performance.</p>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
-          </li>
-          <li class="service-item">
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Full‑Stack Development</h4>
-              <p class="service-item-text">Developing complete web solutions covering both client-side and server-side, ensuring responsive and user-focused designs.</p>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="https://wa.me/+13477699453" class="contact-link">+1 (347) 769-9453</a>
             </div>
+
           </li>
-          <li class="service-item">
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">App Development</h4>
-              <p class="service-item-text">Creating intuitive and high‑performance mobile and web applications with modern frameworks for smooth user experiences.</p>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
             </div>
-          </li>
-          <li class="service-item">
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Machine Learning Engineering</h4>
-              <p class="service-item-text">Building and deploying intelligent AI/ML models for predictive analysis, automation, and enhanced decision‑making processes.</p>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">January 13, 2005</time>
             </div>
+
           </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <a href="https://www.google.com/maps/place/Delhi" class="contact-link">New Delhi , India</a>
+
+            </div>
+
+          </li>
+
         </ul>
-      </section>
-    </article>
 
-    <!-- Projects Section -->
-    <article class="projects" data-page="projects">
-      <header><h2 class="h2 article-title">🏗️ Projects</h2></header>
-      <ul class="project-list">
-        <li class="project-item">
-          <a href="https://github.com/GautamSinghBadwal/real-time-face-tracker" target="_blank" rel="noopener noreferrer">
-            <img class="project-img" src="./assets/images/Real-Time Face Detection and Analysis Tool.png" alt="Real-Time Face Detection Tool">
-            <h4 class="h4">Real-Time Face Detection and Analysis Tool</h4>
-            <p>A computer vision tool that detects and tracks human faces in real-time using a webcam and Python.</p>
-            <p><strong>Skills:</strong> Python, OpenCV, MediaPipe</p>
-          </a>
-        </li>
-        <!-- Add more project-item blocks here as needed -->
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/GautamSinghBadwal" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/gautamsinghbadwal/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/gautambadwal" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <div class="main-content">
+
+      
+
+      <ul class="navbar-list">
+  <li class="navbar-item">
+    <button class="navbar-link active" data-nav-link>About</button>
+  </li>
+  <li class="navbar-item">
+    <button class="navbar-link" data-nav-link>Resume</button>
+  </li>
+  <li class="navbar-item">
+    <button class="navbar-link" data-nav-link>Projects</button>
+  </li>
+  <li class="navbar-item"><button class="navbar-link" data-nav-link>Certificates</button></li> 
       </ul>
-    </article>
+</ul>
 
-    <!-- Certificates Section -->
-    <article class="certificates" data-page="certificates">
-      <header><h2 class="h2 article-title">🏅Licenses & Certifications</h2></header>
-      <div class="certificate-panel">
-         <div class="certificate-item">
+
+
+
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">💼 About Me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+           Hi, I’m Gautam Singh Badwal from New Delhi, India. I’m a Software Engineer and Cyber Security Specialist who loves building things that are not only powerful but also secure, fast, and reliable.
+
+I work across Ethical Hacking, Data Science, Machine Learning, Full‑Stack Development, and App Development, blending my technical skills with a strong focus on safety, speed, and scalability.
+
+Over the years, I’ve had the chance to work with World Vision Canada, Toshiba India, Bank of Montreal, TC Energy, Lambton College, and PortSwigger — and I’ve also taken on multiple freelance projects on Fiverr. My work has ranged from running penetration tests and incident response to creating secure, user‑friendly web and mobile apps.
+
+Right now, I’m pursuing my B.Tech in Computer Science at IIT Madras (with a Minor in AI from IIT Ropar). I’ve also earned certifications from Harvard University (Python), HCL GUVI, EC‑Council, and Microsoft — which have sharpened my skills in security engineering, web application testing, AI solutions, and both front‑end and back‑end development.
+          </p>
+        </section>
+
+
+      
+
+        <section class="service">
+
+         <h3 class="h3 service-title">What I'm Doing</h3>
+
+<ul class="service-list">
+
+  <li class="service-item">
+    <div class="service-content-box">
+      <h4 class="h4 service-item-title">Ethical Hacking</h4>
+      <p class="service-item-text">
+        Performing penetration testing and vulnerability assessments to identify and fix security risks, ensuring systems remain secure from threats.
+      </p>
+    </div>
+  </li>
+
+  <li class="service-item">
+    <div class="service-content-box">
+      <h4 class="h4 service-item-title">Data Science</h4>
+      <p class="service-item-text">
+        Analyzing and interpreting complex data to deliver actionable insights, building predictive models for real-world problem-solving.
+      </p>
+    </div>
+  </li>
+
+  <li class="service-item">
+    <div class="service-content-box">
+      <h4 class="h4 service-item-title">Back-End Development</h4>
+      <p class="service-item-text">
+        Designing and implementing secure, scalable server-side applications, APIs, and database solutions for seamless performance.
+      </p>
+    </div>
+  </li>
+
+  <li class="service-item">
+    <div class="service-content-box">
+      <h4 class="h4 service-item-title">Full‑Stack Development</h4>
+      <p class="service-item-text">
+        Developing complete web solutions covering both client-side and server-side, ensuring responsive and user-focused designs.
+      </p>
+    </div>
+  </li>
+
+  <li class="service-item">
+    <div class="service-content-box">
+      <h4 class="h4 service-item-title">App Development</h4>
+      <p class="service-item-text">
+        Creating intuitive and high‑performance mobile and web applications with modern frameworks for smooth user experiences.
+      </p>
+    </div>
+  </li>
+
+  <li class="service-item">
+    <div class="service-content-box">
+      <h4 class="h4 service-item-title">Machine Learning Engineering</h4>
+      <p class="service-item-text">
+        Building and deploying intelligent AI/ML models for predictive analysis, automation, and enhanced decision‑making processes.
+      </p>
+    </div>
+  </li>
+
+</ul>
+
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+    <article class="projects" data-page="projects">
+  <header>
+    <h2 class="h2 article-title">🏗️ Projects</h2>
+  </header>
+
+  <ul class="project-list">
+    <li class="project-item">
+      <a href="https://github.com/GautamSinghBadwal/real-time-face-tracker" target="https://github.com/GautamSinghBadwal/real-time-face-tracker" rel="noopener noreferrer">
+        <img class="project-img" src="./assets/images/Real-Time Face Detection and Analysis Tool.png" alt="Blinkit Clone project screenshot">
+        <h4 class="h4">Real-Time Face Detection and Analysis Tool</h4>
+        <p>A computer vision tool that detects and tracks human faces in real-time using a webcam, with applications in virtual
+          meetings. Built with Python this project highlights skills in real-time processing, facial landmark detection and
+          integration of machine learning models.
+        </p>
+        <p><strong>Skills:</strong>Python (Programming Language)</p>
+      </a>
+    </li>
+    <!-- Repeat for other projects similarly, adding images -->
+  </ul>
+</article>
+
+
+<article class="certificates" data-page="certificates">
+  <header>
+    <h2 class="h2 article-title">🏅Licenses & Certifications</h2>
+  </header>
+  <div class="certificate-panel">
+
+    <div class="certificate-item">
       <h4>SEBI Investor</h4>
       <p>National Institute of Securities Markets (NISM)</p>
       <p>Issued Jan 2025 · Expires Jan 2027</p>
@@ -405,109 +483,356 @@
 </article>
 
 
-        <!-- ... (repeat for each certificate, see above history for more) ... -->
-      </div>
-    </article>
 
-    <!-- Resume Section -->
-    <article class="resume" data-page="resume">
-      <header><h2 class="h2 article-title">🎓 Resume</h2></header>
-      <section class="timeline">
-        <div class="title-wrapper"><h3 class="h3">Experience</h3></div>
-        <ol class="timeline-list">
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Security Engineer</h4><span>World Vision Canada | Jan 2024 - Feb 2025 | Remote</span></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Cyber Analyst</h4><span>Toshiba India | Aug 2024 - Sep 2024 | India</span></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Security Engineer</h4><span>Bank of Montreal | Jan 2023 - Jun 2023 | Remote</span></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Data Security Analyst</h4><span>TC Energy | Jun 2023 - Dec 2023 | Remote</span></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Cyber Security Analyst</h4><span>Lambton College | 2023 - 2024 | Remote</span></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Web Penetration Practitioner</h4><span>PortSwigger | Jan 2023 - Nov 2023 | Remote</span></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Freelance Developer</h4><span>Fiverr | 2020 - 2022 | Remote</span></li>
-        </ol>
-      </section>
-      <section class="timeline">
-        <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Education</h3></div>
-        <ol class="timeline-list">
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Kendriya Vidyalaya Sangathan (KVS)</h4><span>2011 to 2021</span><p class="timeline-text">CBSE {Class 10}</p></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">KVS</h4><span>2011 to 2023</span><p class="timeline-text">CBSE {Class 12}</p></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">IIT Madras</h4><span>2024 to 2028</span><p class="timeline-text">BTech CSE</p></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">IIT Ropar</h4><span>2024 to 2025</span><p class="timeline-text">Minor in AI</p></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Lambton College Toronto</h4><span>2022 - 2023</span><p class="timeline-text">Cyber Security</p></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Harvard University</h4><span>May 2024 to July 2024</span><p class="timeline-text">Python</p></li>
-        </ol>
-      </section>
-      <section class="skill">
-        <h3 class="h3 skills-title">My skills</h3>
-        <ul class="skills-list">
-          <li class="skills-item"><h5>HTML</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%; background: var(--highlight)"></div></div><data value="90">90%</data></li>
-          <li class="skills-item"><h5>CSS</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%; background: var(--highlight)"></div></div><data value="85">85%</data></li>
-          <li class="skills-item"><h5>JavaScript</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 60%; background: var(--highlight)"></div></div><data value="60">60%</data></li>
-          <li class="skills-item"><h5>Python</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 60%; background: var(--highlight)"></div></div><data value="60">60%</data></li>
-          <li class="skills-item"><h5>SQL</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 70%; background: var(--highlight)"></div></div><data value="70">70%</data></li>
-          <li class="skills-item"><h5>Ruby</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 40%; background: var(--highlight)"></div></div><data value="40">40%</data></li>
-          <li class="skills-item"><h5>WordPress</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 100%; background: var(--highlight)"></div></div><data value="100">100%</data></li>
-          <li class="skills-item"><h5>Bootstrap</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 60%; background: var(--highlight)"></div></div><data value="60">60%</data></li>
-          <li class="skills-item"><h5>jQuery</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 20%; background: var(--highlight)"></div></div><data value="20">20%</data></li>
-          <li class="skills-item"><h5>Node.js</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 20%; background: var(--highlight)"></div></div><data value="20">20%</data></li>
-          <li class="skills-item"><h5>React</h5><div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 25%; background: var(--highlight)"></div></div><data value="25">25%</data></li>
-        </ul>
-      </section>
-    </article>
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">🎓 Resume</h2>
+        </header>
+
+
+        <section class="timeline">
+  <div class="title-wrapper">
+    <h3 class="h3">Experience</h3>
   </div>
-</main>
+  <ol class="timeline-list">
+    <!-- Replace all inside with: -->
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Security Engineer</h4>
+      <span>World Vision Canada | Jan 2024 - Feb 2025 | Toronto, Canada (Remote)</span>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Cyber Analyst</h4>
+      <span>Toshiba India | Aug 2024 - Sep 2024 | India</span>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Security Engineer</h4>
+      <span>Bank of Montreal | Jan 2023 - Jun 2023 | Toronto, Canada (Remote)</span>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Data Security Analyst</h4>
+      <span>TC Energy | Jun 2023 - Dec 2023 | Calgary, Canada (Remote)</span>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Cyber Security Analyst</h4>
+      <span>Lambton College | 2023 - 2024 | Toronto, Canada (Remote)</span>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Web Penetration Practitioner</h4>
+      <span>PortSwigger | Jan 2023 - Nov 2023 | India (Remote)</span>
+    </li>
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">Freelance Developer</h4>
+      <span>Fiverr | 2020 - 2022 | India (Remote)</span>
+    </li>
+  </ol>
+</section>
 
-<!-- Navigation + Theme JS -->
-<script>
-  // Dark/Light mode toggle
-  const toggleButton = document.getElementById('theme-toggle');
-  const body = document.body;
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    body.classList.add('dark-mode');
-    toggleButton.textContent = '☀️ Light Mode';
-  } else { toggleButton.textContent = '🌙 Dark Mode'; }
-  toggleButton.addEventListener('click', () => {
-    if (body.classList.contains('dark-mode')) {
-      body.classList.remove('dark-mode');
-      toggleButton.textContent = '🌙 Dark Mode';
-      localStorage.setItem('theme', 'light');
-    } else {
-      body.classList.add('dark-mode');
-      toggleButton.textContent = '☀️ Light Mode';
-      localStorage.setItem('theme', 'dark');
-    }
-  });
+        
+        <section class="timeline">
 
-  // Navbar navigation logic
-  const navigationLinks = document.querySelectorAll("[data-nav-link]");
-  const pages = document.querySelectorAll("[data-page]");
-  navigationLinks.forEach(navLink => {
-    navLink.addEventListener("click", function () {
-      const targetPage = this.textContent.trim().toLowerCase();
-      pages.forEach(page => {
-        if (page.dataset.page === targetPage) { page.classList.add("active"); }
-        else { page.classList.remove("active"); }
-      });
-      navigationLinks.forEach(btn => {
-        if (btn.textContent.trim().toLowerCase() === targetPage) { btn.classList.add("active"); }
-        else { btn.classList.remove("active"); }
-      });
-      window.scrollTo(0, 0);
-    });
-  });
-</script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
 
-<!-- Uncomment below for Google Translate -->
-<!--
-<div id="google_translate_element" style="position:fixed;bottom:20px;right:20px;z-index:999;"></div>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
--->
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Kendriya Vidyalaya Sangathan (KVS)</h4>
+
+              <span>2011 to 2021</span>
+
+              <p class="timeline-text">
+                CBSE {Class 10}
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Kendriya Vidyalaya Sangathan (KVS)</h4>
+
+              <span>2011 to 2023</span>
+
+              <p class="timeline-text">
+                CBSE {Class 12}
+              </p>
+
+            </li>
+            <li class="timeline-list">
+ 
+              <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">IIT Madras</h4>
+
+              <span>2024 to 2028</span>
+                <p class="timeline-text">
+                  BTech CSE </p>  </li>
+
+            
+              
+  
+              <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">IIT Ropar</h4>
+ 
+                <span>2024 to 2025</span>
+                <p class="timeline-text">
+                   Minor in AI</p>  </li>
+              
+  
+              <li class="timeline-item">
+    <h4 class="h4 timeline-item-title">Lambton College Toronto</h4>
+
+                <span>2022 - 2023</span>
+                <p class="timeline-text">
+                  Cyber Security</p>  </li> 
+            
+            
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Harvard University</h4>
+                            <span>May 2024 to July 2024 </span>
+
+              <p class="timeline-text">
+                Python
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Ethical Hacking</h4>
+             </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Back Development</h4>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Machine Learning Engineer</h4>
+           </li>
+
+           <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Data Science</h4>
+         </li>
+
+         <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Develops</h4>
+       </li>
+
+       <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">Cyber Security</h4>
+     </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">HTML</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">CSS</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">JavaScript</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+              <li class="skills-item">
+
+                <div class="title-wrapper">
+                  <h5 class="h5">SQL</h5>
+                  <data value="70">70%</data>
+                </div>
+  
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                </div>
+                <li class="skills-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">Ruby</h5>
+                    <data value="40">40%</data>
+                  </div>
+    
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 40%;"></div>
+                  </div>
+
+                  <li class="skills-item">
+
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">WordPress</h5>
+                    <data value="100">100%</data>
+                  </div>
+    
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 100%;"></div>
+                  </div>
+                  
+
+                  <li class="skills-item">
+
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">Bootstrap</h5>
+                    <data value="60">60%</data>
+                  </div>
+    
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 60%;"></div>
+                  </div>
+
+
+
+
+
+                  <li class="skills-item">
+
+                
+                    <div class="title-wrapper">
+                      <h5 class="h5">jQuery</h5>
+                      <data value="20">20%</data>
+                    </div>
+
+                      <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 20%;"></div>
+                    </div>
+
+                    <li class="skills-item">
+
+                
+                      <div class="title-wrapper">
+                        <h5 class="h5">Node.js</h5>
+                        <data value="20">20%</data>
+                      </div>
+    
+                      <div class="skill-progress-bg">
+                        <div class="skill-progress-fill" style="width: 20%;"></div>
+                      </div>
+                      <li class="skills-item">
+
+                
+                        <div class="title-wrapper">
+                          <h5 class="h5">React</h5>
+                          <data value="25">25%</data>
+                        </div>
+      
+                        <div class="skill-progress-bg">
+                          <div class="skill-progress-fill" style="width: 25%;"></div>
+                        </div>
+        
+
+          
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <button class="filter-select" data-select>
+
+
+      
+      </button>
+
+
+            
+
+            
+
+
+            
+
+            
+
+        
+
+        </section>
+
+      </article>
+      
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <script src="./assets/js/script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
+
 </html>
