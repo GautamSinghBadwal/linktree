@@ -14,13 +14,6 @@ navigationLinks.forEach(navLink => {
       }
     });
 
-    navigationLinks.forEach(navLink => {
-  navLink.addEventListener("click", handleNavClick);
-  navLink.addEventListener("touchend", handleNavClick);
-});
-
-
-
     // Set the correct nav button as active
     navigationLinks.forEach(btn => {
       if (btn.textContent.trim().toLowerCase() === targetPage) {
