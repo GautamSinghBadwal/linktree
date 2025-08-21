@@ -75,13 +75,6 @@
 
 }
 
-article {
-  display: none;
-}
-
-article.active {
-  display: block;
-}
 
 
 
