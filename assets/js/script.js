@@ -133,19 +133,19 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav links
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
 navigationLinks.forEach(link => {
   link.addEventListener("click", function () {
-    const targetPage = this.dataset.navLink; // safer than innerHTML
+    const targetPage = this.dataset.navLink;
 
+    // Switch active page
     pages.forEach(page => {
-      if (page.dataset.page === targetPage) {
-        page.classList.add("active");
-      } else {
-        page.classList.remove("active");
-      }
+      page.classList.toggle("active", page.dataset.page === targetPage);
     });
 
+    // Switch active nav link
     navigationLinks.forEach(nav => nav.classList.remove("active"));
     this.classList.add("active");
 
@@ -153,4 +153,3 @@ navigationLinks.forEach(link => {
   });
 });
 
-}
