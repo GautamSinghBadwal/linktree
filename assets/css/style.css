@@ -677,7 +677,7 @@ main {
   border-radius: 8px;
 }
 
-.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+.select-item button:hover { background: hsl(240, 2%, 20%); }
 
 .project-list {
   display: grid;
