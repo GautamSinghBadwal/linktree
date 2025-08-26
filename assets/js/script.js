@@ -1,4 +1,5 @@
 'use strict';
+const filterItems = document.querySelectorAll("[data-filter-item]");
 
 /* ---------------------
    Element toggle helper
