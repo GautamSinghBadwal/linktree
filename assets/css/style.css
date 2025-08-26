@@ -1407,49 +1407,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * NAVBAR
-   */
-
-  .navbar {
-    position: absolute;
-    bottom: auto;
-    top: 0;
-    left: auto;
-    right: 0;
-    width: max-content;
-    border-radius: 0 20px;
-    padding: 0 20px;
-    box-shadow: none;
-  }
-
-  .navbar-list {
-    gap: 30px;
-    padding: 0 20px;
-  }
-
-  .navbar-link { font-weight: var(--fw-500); }
 
 
 
-  /**
-   * ABOUT
-   */
-
-  /* service */
-
-  .service-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 25px;
-  }
-
-  /* testimonials */
-
-  .testimonials-item { min-width: calc(50% - 15px); }
-
-  /* clients */
-
-  .clients-item { min-width: calc(25% - 38px); }
 
 
 
@@ -1461,21 +1421,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * BLOG
-   */
-
-  .blog-banner-box { height: 230px; }
-
-}
+  /
 
 
 
-
-
-/**
- * responsive larger than 1250px screen
- */
 
 @media (min-width: 1250px) {
 
