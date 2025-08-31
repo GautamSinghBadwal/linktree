@@ -135,18 +135,55 @@
 
     </aside>
 
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
     <div class="main-content">
 
-      
-    <!--
+      <!--
         - #NAVBAR
       -->
 
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>     
+          </li>
+
+  
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
       
-
-
-
-
       <article class="about " data-page="about">
 
         <header>
@@ -156,10 +193,13 @@
         <section class="about-text">
           <p>
             Hi, I’m Gautam Singh Badwal from New Delhi, India. I’m a Software Engineer and Cyber Security Specialist who loves building things that are not only 
-            powerful but also secure, fast, and reliable. I work across Ethical Hacking, Data Science, Machine Learning, Full‑Stack Development, and App Development, 
+            powerful but also secure, fast, and reliable.
+            </p>
+            <p> I work across Ethical Hacking, Data Science, Machine Learning, Full‑Stack Development, and App Development, 
             blending my technical skills with a strong focus on safety, speed, and scalability. Over the years, I’ve had the chance to work with CNBC Canada, World
             Vision Canada, Toshiba India, Bank of Montreal, TC Energy, Lambton College, and PortSwigger — and I’ve also taken on multiple freelance projects on Fiverr.
-            My work has ranged from running penetration tests and incident response to creating secure, user‑friendly web and mobile apps. Right now, I’m pursuing my
+            My work has ranged from running penetration tests and incident response to creating secure, user‑friendly web and mobile apps.</p> 
+            <p>Right now, I’m pursuing my
             B.Tech in Computer Science at IIT Madras (with a Minor in AI from IIT Ropar). I’ve also earned certifications from Harvard University (Python), HCL GUVI,
             EC‑Council, and Microsoft — which have sharpened my skills in security engineering, web application testing, AI solutions, and both front‑end and back‑end 
             development.
@@ -169,9 +209,11 @@
         </section>
 
 
-      
+        <!--
+          - service
+        -->
 
-        <section class="service">
+           <section class="service">
 
          <h3 class="h3 service-title">What I'm Doing</h3>
 
@@ -233,17 +275,66 @@
 
 </ul>
 
-
-            </li>
-
-          </ul>
+       
 
         </section>
 
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+              
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        
       </article>
 
 
-  
+
+
+
+      <!--
+        - #RESUME
+      -->
+
       <article class="resume" data-page="resume">
 
         <header>
@@ -256,13 +347,12 @@
     <h3 class="h3">Experience</h3>
   </div>
   <ol class="timeline-list">
-    <!-- Replace all inside with: -->
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Software Engineer</h4>
-      <span>CNBC Canada | Jan 2025 - Present | Toronto, Canada (Remote)</span>
+      <span>CNBC Canada |   Aug 2025 - Present | Toronto, Canada (Remote)</span>
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Security Engineer</h4>
-      <span>World Vision Canada | Jan 2024 - Feb 2025 | Toronto, Canada (Remote)</span>
+      <span>World Vision Canada | Jan 2025 - May 2025 | Toronto, Canada (Remote)</span>
     </li>
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Cyber Analyst</h4>
@@ -270,7 +360,7 @@
     </li>
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Security Engineer</h4>
-      <span>Bank of Montreal | Jan 2023 - Jun 2023 | Toronto, Canada (Remote)</span>
+      <span>Bank of Montreal | Jan 2024 - Jun 2024 | Montreal, Canada (Remote)</span>
     </li>
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Data Security Analyst</h4>
@@ -282,7 +372,7 @@
     </li>
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Web Penetration Practitioner</h4>
-      <span>PortSwigger | Jan 2023 - Nov 2023 | India (Remote)</span>
+      <span>PortSwigger | 2023 - 2023 | India (Remote)</span>
     </li>
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Freelance Developer</h4>
@@ -558,258 +648,479 @@
 
       </article>
 
-     <article class="projects" data-page="projects">
-  <header>
-    <h2 class="h2 article-title">🏗️ Projects</h2>
-  </header>
+      <!--
+        - #Projects
+      -->
 
-  <ul class="project-list">
-    <li class="project-item">
-      <a href="https://github.com/GautamSinghBadwal/real-time-face-tracker" target="https://github.com/GautamSinghBadwal/real-time-face-tracker" rel="noopener noreferrer">
-        <img class="project-img" src="./assets/images/Real-Time Face Detection and Analysis Tool.png" alt="Blinkit Clone project screenshot">
-        <h4 class="h4">Real-Time Face Detection and Analysis Tool</h4>
-        <p>A computer vision tool that detects and tracks human faces in real-time using a webcam, with applications in virtual
-          meetings. Built with Python this project highlights skills in real-time processing, facial landmark detection and
-          integration of machine learning models.
-        </p>
-        <p><strong>Skills:</strong>Python (Programming Language)</p>
-      </a>
-    </li>
+      <article class="Projects" data-page="Projects">
 
-  </ul>
-  <div style="margin-top: 20px;">
-  <a href="mailto:gautamsinfgbadwal.git@gmail.com" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">
-    More Projects? DM Me
-  </a>
-</div>
-</article>
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
 
+        <section class="projects">
 
-<article class="certificates" data-page="certificates">
-  <header>
-    <h2 class="h2 article-title">🏅Licenses & Certifications</h2>
-  </header>
-  <div class="certificate-panel">
+          <ul class="filter-list">
 
-    <div class="certificate-item">
-      <h4>SEBI Investor</h4>
-      <p>National Institute of Securities Markets (NISM)</p>
-      <p>Issued Jan 2025 · Expires Jan 2027</p>
-      <p>Credential ID: NISM20250000094773</p>
-      <a href="https://www.linkedin.com/in/gautamsinghbadwal0/details/certifications/1736128826751/single-media-viewer?type=DOCUMENT&profileId=ACoAAEz4edoB_qWbxPeL1pkujm9if9k7GiJdREY" target="_blank">Show credential</a>
-    </div>
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
 
-    <div class="certificate-item">
-      <h4>Designing and Implementing Effective Cybersecurity Controls</h4>
-      <p>LinkedIn · Issued Apr 2024</p>
-      <p>Skills: Security Controls, Security Compliance</p>
-      <a href="https://www.linkedin.com/learning/certificates/0b2754241cf175572f025fe312ada2c008ffe030a52902c66428f5ed2b21774f" target="_blank">Show credential</a>
-    </div>
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
 
-    <div class="certificate-item">
-      <h4>Develop Your Skills in Agile Software Development</h4>
-      <p>LinkedIn · Issued Apr 2024</p>
-      <p>Skills: Agile Application Development, Agile Software Development</p>
-      <a href="https://www.linkedin.com/learning/certificates/c3e450d27dd359db962184ad2e04f51b8af9d6c26114725215eb649e740c4012" target="_blank">Show credential</a>
-    </div>
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
 
-    <div class="certificate-item">
-      <h4>The Non-Technical Skills of Effective Data Scientists</h4>
-      <p>LinkedIn · Issued Apr 2024</p>
-      <p>Skills: Soft Skills, Data Science</p>
-      <a href="https://www.linkedin.com/learning/certificates/ef1889c328b4e02dc7798181771dce09e4fb7c9383da278ad820c8c64349f1b6" target="_blank">Show credential</a>
-    </div>
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
 
-    <div class="certificate-item">
-      <h4>Career Essentials in Cybersecurity by Microsoft and LinkedIn</h4>
-      <p>Microsoft · Issued Mar 2024</p>
-      <p>Skills: Cybersecurity, Information Security Awareness, Threat & Vulnerability Management</p>
-      <a href="https://www.linkedin.com/learning/certificates/c458f7ae8bda9767bccfa9efaaf1ef9bb0991a6265565115d1282870bc816514" target="_blank">Show credential</a>
-    </div>
+          </ul>
 
-    <div class="certificate-item">
-      <h4>Cybersecurity Awareness: Cybersecurity Terminology</h4>
-      <p>LinkedIn · Issued Mar 2024</p>
-      <p>Skills: Information Security Awareness, Ethical Hacking</p>
-      <a href="https://www.linkedin.com/learning/certificates/b5ac243a1458f352d65df109384b4c27f48ab5f226d8ef1e5dd71bc66cd66f05" target="_blank">Show credential</a>
-    </div>
+          <div class="filter-select-box">
 
-    <div class="certificate-item">
-      <h4>Cybersecurity Foundations</h4>
-      <p>LinkedIn · Issued Mar 2024</p>
-      <p>Skills: Cybersecurity, Ethical Hacking</p>
-      <a href="https://www.linkedin.com/learning/certificates/636d47bd8304a2ed996e40c76ba69f51cda40cbeb3e70256638abc4d73af9a28" target="_blank">Show credential</a>
-    </div>
+            <button class="filter-select" data-select>
 
-    <div class="certificate-item">
-      <h4>The Cybersecurity Threat Landscape</h4>
-      <p>LinkedIn · Issued Mar 2024</p>
-      <p>Skills: Cybersecurity, Threat & Vulnerability Management, Ethical Hacking</p>
-      <a href="https://www.linkedin.com/learning/certificates/3fa290fcb0477d204f391f88d21412293d884c9eef28879b4ed5ce7b87d205ec" target="_blank">Show credential</a>
-    </div>
+              <div class="select-value" data-selecct-value>Select category</div>
 
-    <div class="certificate-item">
-      <h4>Cyber Security & Ethical Hacking</h4>
-      <p>HCL GUVI</p>
-      <a href="https://www.guvi.in/share-certificate/6Vp7Z8L891Fb66eJ39" target="_blank">Show credential</a>
-    </div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
 
-    <div class="certificate-item">
-      <h4>AI For India 2.0</h4>
-      <p>National Skill Development Corporation</p>
-      <a href="https://www.guvi.in/share-certificate/7319N2owH5z0Mn6477" target="_blank">Show credential</a>
-    </div>
+            </button>
 
-    <div class="certificate-item">
-      <h4>Build a computer vision app with Azure Cognitive Services</h4>
-      <p>Microsoft</p>
-      <a href="https://coursera.org/share/6a0383bfa47816e8580ba656adbd0f86" target="_blank">Show credential</a>
-    </div>
+            <ul class="select-list">
 
-    <div class="certificate-item">
-      <h4>CS50 Python</h4>
-      <p>Harvard University</p>
-      <a href="https://certificates.cs50.io/7b595a3e-477a-4452-af2b-418c6fea4915.pdf" target="_blank">Show credential</a>
-    </div>
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
 
-    <div class="certificate-item">
-      <h4>Cyber Ethics</h4>
-      <p>Ministry of Electronics and Information Technology</p>
-      <a href="https://infosecawareness.in/validate-certificate?certid=ISEA/NCSAM/CYBETH/76367" target="_blank">Show credential</a>
-    </div>
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
 
-    <div class="certificate-item">
-      <h4>Cybersecurity</h4>
-      <p>Tech Mahindra Foundation</p>
-      <a href="https://drive.google.com/file/d/1dGdBQNJR6FDQV4Hon2A6l2RrqbJejOF8/view?usp=sharing" target="_blank">Show credential</a>
-    </div>
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
 
-    <div class="certificate-item">
-      <h4>Data Analysis using Microsoft Excel</h4>
-      <p>Coursera</p>
-      <a href="https://www.coursera.org/account/accomplishments/verify/83QQAML3DSLN?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project" target="_blank">Show credential</a>
-    </div>
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
 
-    <div class="certificate-item">
-      <h4>Data Science Course - Mastering the Fundamentals</h4>
-      <p>Scaler</p>
-      <a href="https://moonshot.scaler.com/s/sl/IHlPLy6Tg-" target="_blank">Show credential</a>
-    </div>
+            </ul>
 
-    <div class="certificate-item">
-      <h4>Ethical Hacking Essentials (EHE)</h4>
-      <p>EC-Council</p>
-      <a href="https://codered.eccouncil.org/certificate/db602940-3272-4bbe-ba04-983446e90b64" target="_blank">Show credential</a>
-    </div>
+          </div>
 
-    <div class="certificate-item">
-      <h4>Frontend Developer (React)</h4>
-      <p>HackerRank</p>
-      <a href="https://www.hackerrank.com/certificates/iframe/e5f8cb5b4888" target="_blank">Show credential</a>
-    </div>
+          <ul class="project-list">
 
-    <div class="certificate-item">
-      <h4>Google Analytics</h4>
-      <p>Google</p>
-      <a href="https://skillshop.credential.net/f023e4ee-582a-47a1-b0fc-077952d6a0cb" target="_blank">Show credential</a>
-    </div>
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
 
-    <div class="certificate-item">
-      <h4>ISEA Certified Cyber Hygiene Practitioner</h4>
-      <p>Ministry of Electronics and Information Technology</p>
-      <a href="https://infosecawareness.in/validate-certificate?certid=CDACHYD/ISEA/CHP/132895" target="_blank">Show credential</a>
-    </div>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-    <div class="certificate-item">
-      <h4>Java (Basic)</h4>
-      <p>HackerRank</p>
-      <a href="https://www.hackerrank.com/certificates/2264a2a972f8" target="_blank">Show credential</a>
-    </div>
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
 
-    <div class="certificate-item">
-      <h4>JavaScript (Intermediate)</h4>
-      <p>HackerRank</p>
-      <a href="https://www.hackerrank.com/certificates/iframe/5338db0da881" target="_blank">Show credential</a>
-    </div>
+                <h3 class="project-title">Finance</h3>
 
-    <div class="certificate-item">
-      <h4>Meta Front-End Developer Professional</h4>
-      <p>Meta</p>
-      <a href="https://www.coursera.org/account/accomplishments/specialization/NUU4Z84CG3U9?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof" target="_blank">Show credential</a>
-    </div>
+                <p class="project-category">Web development</p>
 
-    <div class="certificate-item">
-      <h4>Microsoft Certified: Azure AI Fundamentals</h4>
-      <p>Microsoft</p>
-      <a href="https://drive.google.com/drive/folders/1A4TRfnvl-rVIOTQJdIPattAVVAjvK78P" target="_blank">Show credential</a>
-    </div>
+              </a>
+            </li>
 
-    <div class="certificate-item">
-      <h4>Networking Devices and Initial Configuration</h4>
-      <p>Cisco</p>
-      <a href="https://www.credly.com/badges/e6cf63f0-cf1d-49e6-b1f8-03e68f98095d" target="_blank">Show credential</a>
-    </div>
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
 
-    <div class="certificate-item">
-      <h4>Python</h4>
-      <p>Harvard University</p>
-      <a href="https://certificates.cs50.io/7b595a3e-477a-4452-af2b-418c6fea4915.pdf" target="_blank">Show credential</a>
-    </div>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-    <div class="certificate-item">
-      <h4>Python (Basic)</h4>
-      <p>HackerRank</p>
-      <a href="https://www.hackerrank.com/certificates/ca83866c7a47" target="_blank">Show credential</a>
-    </div>
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
 
-    <div class="certificate-item">
-      <h4>React (Basic)</h4>
-      <p>HackerRank</p>
-      <a href="https://www.hackerrank.com/certificates/ec058f24287f" target="_blank">Show credential</a>
-    </div>
+                <h3 class="project-title">Orizon</h3>
 
-    <div class="certificate-item">
-      <h4>SQL (Advanced)</h4>
-      <p>HackerRank</p>
-      <a href="https://www.hackerrank.com/certificates/iframe/0f86197ea74d" target="_blank">Show credential</a>
-    </div>
+                <p class="project-category">Web development</p>
 
-    <div class="certificate-item">
-      <h4>SQL Injection Attacks</h4>
-      <p>EC-Council</p>
-      <a href="https://codered.eccouncil.org/certificate/309e5655-01a0-43fe-8daf-001ca9150ba5?logged=false" target="_blank">Show credential</a>
-    </div>
+              </a>
+            </li>
 
-    <div class="certificate-item">
-      <h4>Software Engineer</h4>
-      <p>HackerRank</p>
-      <a href="https://www.hackerrank.com/certificates/58ef9a73e683" target="_blank">Show credential</a>
-    </div>
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
 
-    <div class="certificate-item">
-      <h4>Web Application Security Testing with Google Hacking</h4>
-      <p>EC-Council</p>
-      <a href="https://codered.eccouncil.org/certificate/64b38451-1093-403e-9383-7793f78635c0" target="_blank">Show credential</a>
-    </div>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-  </div>
-</article>
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
 
+                <h3 class="project-title">Fundo</h3>
 
-            
+                <p class="project-category">Web design</p>
 
-            
+              </a>
+            </li>
 
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
 
-            
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-            
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
 
-        
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
 
         </section>
 
-      
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.5259053188!2d76.76357451215983!3d28.64368472633456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1756282905993!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
     </div>
 
   </main>
@@ -819,11 +1130,17 @@
 
 
 
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
+  <!--
+    - ionicon link
+  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
-
 
 </html>
